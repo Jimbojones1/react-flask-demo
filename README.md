@@ -33,7 +33,7 @@ pip3 install --upgrade setuptools
 ### Running the app
 
 1. to run the flask app - `npm run server` from the terminal, check 
-`package.json` script command to see the command.
+`package.json` scripts property to see the command being run.
 
 2. to run react app, in seperate terminal run `npm start`
 
