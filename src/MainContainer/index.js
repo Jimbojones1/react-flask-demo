@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import SearchResultsList from '../components/SearchResultsList';
 import SearchBar from '../components/SearchBar';
 
 class MainContainer extends Component {
@@ -34,6 +34,7 @@ class MainContainer extends Component {
       <React.Fragment>
         <h1>Youtube</h1>
         <SearchBar getYoutubeResults={this.getYoutubeResults}/>
+        <SearchResultsList searchYoutubeResults={this.state.searchYoutubeResults}/>
       </React.Fragment>
       )
   }

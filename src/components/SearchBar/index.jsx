@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Button, Form } from 'semantic-ui-react';
 
 class SearchBar extends Component {
   constructor(){
@@ -14,13 +14,13 @@ class SearchBar extends Component {
   }
   render(){
     return (
-      <form onSubmit={(e) => {
+      <Form onSubmit={(e) => {
         e.preventDefault();
         this.props.getYoutubeResults(this.state.searchTerm)
       }}>
-        <input type='text' name='searchTerm' value={this.state.searchTerm} onChange={this.handleChange}/>
-        <button>Search</button>
-      </form>
+        <Form.Input type='text' name='searchTerm' value={this.state.searchTerm} onChange={this.handleChange}/>
+        <Button>Search</Button>
+      </Form>
       )
   }
 }
