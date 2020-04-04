@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SearchResultsList from '../components/SearchResultsList';
 import SearchBar from '../components/SearchBar';
-
+import { Grid} from 'semantic-ui-react';
 class MainContainer extends Component {
   constructor(){
     super();
@@ -31,11 +31,17 @@ class MainContainer extends Component {
   }
   render(){
     return (
-      <React.Fragment>
-        <h1>Youtube</h1>
-        <SearchBar getYoutubeResults={this.getYoutubeResults}/>
-        <SearchResultsList searchYoutubeResults={this.state.searchYoutubeResults}/>
-      </React.Fragment>
+      <Grid>
+        <Grid.Row columns={2}>
+          <Grid.Column>
+            <h1>Search</h1>
+            <SearchBar getYoutubeResults={this.getYoutubeResults}/>
+          </Grid.Column>
+          <Grid.Column>
+            <SearchResultsList searchYoutubeResults={this.state.searchYoutubeResults}/>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
       )
   }
 }
