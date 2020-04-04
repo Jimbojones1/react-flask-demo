@@ -6,15 +6,19 @@ class MainContainer extends Component {
   constructor(){
     super();
 
-    this.state = {}
+    this.state = {
+      searchYoutubeResults: []
+    }
   }
+  getYoutubeResults = (searchTerm) => {
+    console.log(searchTerm); // lifting
 
-
+  }
   render(){
     return (
       <React.Fragment>
         <h1>Youtube</h1>
-        <SearchBar />
+        <SearchBar getYoutubeResults={this.getYoutubeResults}/>
       </React.Fragment>
       )
   }

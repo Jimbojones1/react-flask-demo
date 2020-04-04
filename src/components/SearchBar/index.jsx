@@ -14,7 +14,10 @@ class SearchBar extends Component {
   }
   render(){
     return (
-      <form>
+      <form onSubmit={(e) => {
+        e.preventDefault();
+        this.props.getYoutubeResults(this.state.searchTerm)
+      }}>
         <input type='text' name='searchTerm' value={this.state.searchTerm} onChange={this.handleChange}/>
         <button>Search</button>
       </form>
