@@ -27,6 +27,7 @@ YOUTUBE_API_KEY=WhatEverYourAPIKEYisNOSTRING
 pip3 install flask
 pip3 install --upgrade google-api-python-client
 pip3 install --upgrade setuptools
+pip3 install python-dotenv
 ```
 
 
