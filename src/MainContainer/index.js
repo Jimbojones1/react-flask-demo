@@ -10,8 +10,23 @@ class MainContainer extends Component {
       searchYoutubeResults: []
     }
   }
-  getYoutubeResults = (searchTerm) => {
+  getYoutubeResults = async (searchTerm) => {
     console.log(searchTerm); // lifting
+
+    // api call
+    try {
+      const request = await fetch(`/search/${searchTerm}`);
+      const results = await request.json() // turns
+      // our json into a js object that we can use
+
+      this.setState({searchYoutubeResults: [...results.data.items]})
+
+
+
+    } catch(err){
+      console.log(err)
+    }
+
 
   }
   render(){
