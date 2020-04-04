@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import MainContainer from './MainContainer';
 
-class App extends Component {
+import SearchBar from '../components/SearchBar';
+
+class MainContainer extends Component {
   constructor(){
     super();
 
@@ -14,7 +13,8 @@ class App extends Component {
   render(){
     return (
       <React.Fragment>
-        <MainContainer />
+        <h1>Youtube</h1>
+        <SearchBar />
       </React.Fragment>
       )
   }
@@ -23,4 +23,4 @@ class App extends Component {
 
 
 
-export default App;
+export default MainContainer;
