@@ -18,7 +18,7 @@ FLASK_ENV=development
 YOUTUBE_API_KEY=WhatEverYourAPIKEYisNOSTRING
 ```
 
-#### modules to install
+#### modules to install for Flask
 
 1. If you know how virtual environments work activate first
 
@@ -28,5 +28,13 @@ pip3 install flask
 pip3 install --upgrade google-api-python-client
 pip3 install --upgrade setuptools
 ```
+
+
+### Running the app
+
+1. to run the flask app - `npm run server` from the terminal, check 
+`package.json` script command to see the command.
+
+2. to run react app, in seperate terminal run `npm start`
 
 
