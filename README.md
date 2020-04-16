@@ -6,6 +6,12 @@
 
 #### Python
 
+0. Activate your virtual environment
+```bash
+virtualenv .env -p python3
+source .env/bin/activate
+```
+
 1.  Inside of flask-api folder create a `.flaskenv` file
 
 - `touch .flaskenv`
